@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MISA.CukCuk.Core.Exceptions;
 using MISA.CukCuk.Core.Interfaces.Repositories;
 using MISA.CukCuk.Core.Interfaces.Services;
 using MISA.CukCuk.Infrastructure.Repositories;
@@ -12,7 +13,7 @@ namespace MISA.CukCuk.Api.Controllers
 {
     [Route("api/v2/[controller]")]
     [ApiController]
-    public class DataAccessBaseController<MISAEntity>  : ControllerBase where MISAEntity : class
+    public class DataAccessBaseController<MISAEntity> : ControllerBase where MISAEntity : class
     {
         IDataAccessBaseRepository<MISAEntity> _dataAccessBaseRepository;
         IDataAccessBaseServices<MISAEntity> _dataAccessBaseServices;
@@ -26,7 +27,9 @@ namespace MISA.CukCuk.Api.Controllers
         /// <summary>
         /// Lấy tất cả bản ghi từ database
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Tất cả bản ghi trong database</returns>
+        /// <response code="200">có dữ liệu được trả về, lấy về thành công</response>
+        /// <response code="204">không có dữ liệu được trả về, lấy về thất bại</response>
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -39,7 +42,9 @@ namespace MISA.CukCuk.Api.Controllers
         /// Lấy bản ghi từ database theo id
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>1 bản ghi có id tương ứng</returns>
+        /// <response code="200">có dữ liệu được trả về, lấy về thành công</response>
+        /// <response code="204">không có dữ liệu được trả về, lấy về thất bại</response>
         [HttpGet("{entityid}")]
         public IActionResult GetGetCustomerById(Guid entityid)
         {
@@ -58,11 +63,14 @@ namespace MISA.CukCuk.Api.Controllers
         /// </summary>
         /// <param name="pageIndex"></param>
         /// <param name="pageSize"></param>
-        /// <returns></returns>
+        /// <returns>Tất cả bản ghi tương ứng với phân trang</returns>
+        /// <response code="200">có dữ liệu được trả về, lấy về thành công</response>
+        /// <response code="204">không có dữ liệu được trả về, lấy về thất bại</response>
         [HttpGet("Paging")]
 
         public IActionResult GetPaging(int pageIndex, int pageSize)
         {
+            
             var entities = _dataAccessBaseServices.GetPaging(pageIndex, pageSize);
             if (entities.Count() > 0)
             {
@@ -78,14 +86,16 @@ namespace MISA.CukCuk.Api.Controllers
         /// Insert 1 bản ghi vào database 
         /// </summary>
         /// <param name="customer"></param>
-        /// <returns></returns>
+        /// <returns>Số lượng bản ghi bị ảnh hưởng</returns>
+        /// <response code="200">có số lượng bản ghi bị ảnh hưởng, thêm thành công</response>
+        /// <response code="204">không có số lượng bản ghi bị ảnh hưởng, thêm thất bại</response>
 
         [HttpPost]
         public IActionResult Post([FromBody] MISAEntity entity)
         {
             var rowsAffect = _dataAccessBaseServices.Post(entity);
 
-            if (rowsAffect > 0) return Ok();
+            if (rowsAffect > 0) return Ok(rowsAffect);
             else return NoContent();
         }
 
@@ -94,7 +104,9 @@ namespace MISA.CukCuk.Api.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <param name="customer"></param>
-        /// <returns></returns>
+        /// <returns>Số lượng bản ghi bị ảnh hưởng</returns>
+        /// <response code="200">có số lượng bản ghi bị ảnh hưởng, sửa thành công</response>
+        /// <response code="204">không có số lượng bản ghi bị ảnh hưởng, sửa thất bại</response>
         [HttpPut("{id}")]
         public IActionResult Put(Guid id, [FromBody] MISAEntity entity)
         {
@@ -117,7 +129,9 @@ namespace MISA.CukCuk.Api.Controllers
         /// Xóa 1 bản ghi trong database 
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>Số lượng bản ghi bị ảnh hưởng</returns>
+        /// <response code="200">có số lượng bản ghi bị ảnh hưởng, xóa thành công</response>
+        /// <response code="204">không có số lượng bản ghi bị ảnh hưởng, xóa thất bại</response>
         [HttpDelete("{entityid}")]
         public IActionResult Delete(Guid entityid)
         {
@@ -125,7 +139,9 @@ namespace MISA.CukCuk.Api.Controllers
             if (rowsAffect > 0) return Ok(rowsAffect);
             else return NoContent();
         }
-        // TODO: thêm base validate không quá 20 ký tự
+        // TODO: viết thêm method filter, xét tên đặc biệt H.Mong
+        // TODO: Tìm hiểu debug
+        // TODO: Tìm hiểu gender = 1 thì genderName = nam...
         // TODO: Tìm hiểu Base check trùng mã khách hàng
     }
 

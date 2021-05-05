@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "S9y50FCapeIH4uUunKOGVduIp+0DUNARjwl44Ggiy4nceHM7dfeo8nanPanJiHHBL9h1tXENGWZoS4IhYHupMg==",
+  "dgSpecHash": "Po5D5j7sz8ino0CYMH2AOf+ZRqdD3PVzRaL2f4YrnGAipuSBzb3lPGCwAA5Gs5sTE3xPHeP7bTJ2EsxooehlRA==",
   "success": true,
-  "projectFilePath": "D:\\Đại học\\Học kì 2 2020-2021\\Web - MISA\\(tháng 4) 27-04\\base class\\MISA.CukCuk.Core\\MISA.CukCuk.Core.csproj",
+  "projectFilePath": "C:\\Users\\nabang\\Downloads\\base class\\MISA.CukCuk.Core\\MISA.CukCuk.Core.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Admin\\.nuget\\packages\\documentformat.openxml\\2.12.3\\documentformat.openxml.2.12.3.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512"
+    "C:\\Users\\nabang\\.nuget\\packages\\documentformat.openxml\\2.12.3\\documentformat.openxml.2.12.3.nupkg.sha512",
+    "C:\\Users\\nabang\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

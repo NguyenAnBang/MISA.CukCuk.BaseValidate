@@ -150,3 +150,5 @@ D:\Đại học\Học kì 2 2020-2021\Web - MISA\(tháng 4) 27-04\base class\MIS
 D:\Đại học\Học kì 2 2020-2021\Web - MISA\(tháng 4) 27-04\base class\MISA.CukCuk.Api\bin\Debug\net5.0\System.IO.Packaging.dll
 D:\Đại học\Học kì 2 2020-2021\Web - MISA\(tháng 4) 27-04\base class\MISA.CukCuk.Api\obj\Debug\net5.0\MISA.CukCuk.Api.Properties.Resources.resources
 D:\Đại học\Học kì 2 2020-2021\Web - MISA\(tháng 4) 27-04\base class\MISA.CukCuk.Api\obj\Debug\net5.0\MISA.CukCuk.Api.csproj.GenerateResource.cache
+C:\Users\nabang\Downloads\base class\MISA.CukCuk.Api\bin\Debug\net5.0\MISA.CukCuk.Api.xml
+C:\Users\nabang\Downloads\base class\MISA.CukCuk.Api\obj\Debug\net5.0\MISA.CukCuk.Api.xml

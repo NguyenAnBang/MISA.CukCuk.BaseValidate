@@ -132,6 +132,9 @@
   <data name="Email_Invalid_msg" xml:space="preserve">
     <value>Email chưa đúng định dạng!.</value>
   </data>
+  <data name="Invalid_Paging_number" xml:space="preserve">
+    <value>Không được phép nhập giá trị âm</value>
+  </data>
   <data name="MISACode" xml:space="preserve">
     <value>001</value>
   </data>
@@ -140,6 +143,12 @@
   </data>
   <data name="PhoneNumber_Invalid_msg" xml:space="preserve">
     <value>Số điện thoại chưa đúng định dạng!.</value>
+  </data>
+  <data name="Regex_email" xml:space="preserve">
+    <value>@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"</value>
+  </data>
+  <data name="Regex_phoneNumber" xml:space="preserve">
+    <value>@"^((\+0?1\s)?)\(?\d{3}\)?[\s.\s]\d{3}[\s.-]\d{4}$"</value>
   </data>
   <data name="User_msg" xml:space="preserve">
     <value>Có lỗi xảy ra vui lòng liên hệ MISA!.</value>

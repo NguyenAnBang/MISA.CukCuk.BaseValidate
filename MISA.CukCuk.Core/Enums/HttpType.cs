@@ -6,7 +6,7 @@ namespace MISA.CukCuk.Core.Enums
 {
     public enum HttpType
     {
-        POST = 0,
-        PUT = 1
+        POST = 0, //Đăng mới một bản ghi
+        PUT = 1 //Chỉnh sửa một bản ghi
     }
 }

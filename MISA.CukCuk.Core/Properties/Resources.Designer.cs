@@ -106,6 +106,15 @@ namespace MISA.CukCuk.Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Không được phép nhập giá trị âm.
+        /// </summary>
+        internal static string Invalid_Paging_number {
+            get {
+                return ResourceManager.GetString("Invalid_Paging_number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 001.
         /// </summary>
         internal static string MISACode {
@@ -129,6 +138,24 @@ namespace MISA.CukCuk.Core.Properties {
         internal static string PhoneNumber_Invalid_msg {
             get {
                 return ResourceManager.GetString("PhoneNumber_Invalid_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to @&quot;^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$&quot;.
+        /// </summary>
+        internal static string Regex_email {
+            get {
+                return ResourceManager.GetString("Regex_email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to @&quot;^((\+0?1\s)?)\(?\d{3}\)?[\s.\s]\d{3}[\s.-]\d{4}$&quot;.
+        /// </summary>
+        internal static string Regex_phoneNumber {
+            get {
+                return ResourceManager.GetString("Regex_phoneNumber", resourceCulture);
             }
         }
         

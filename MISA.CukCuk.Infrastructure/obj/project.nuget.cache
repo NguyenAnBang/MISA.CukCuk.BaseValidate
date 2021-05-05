@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "V4W7CxvmRvTzoaiQjApF1PyUwCqJCc+m7LkTFuF1BaU4L9pv2NHKteVCOy0FsSluESgHjYiZs5U9gqsNbftWDQ==",
+  "dgSpecHash": "F44QPAwqKxTr2puQP2mR2JWKTNd0o4ve9JbgfHBbSpSDbSqUK7WlaINP6SVI+ylTZlfs5EMcKkxOPQ9u42KCdw==",
   "success": true,
-  "projectFilePath": "D:\\Đại học\\Học kì 2 2020-2021\\Web - MISA\\(tháng 4) 27-04\\base class\\MISA.CukCuk.Infrastructure\\MISA.CukCuk.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\nabang\\Downloads\\base class\\MISA.CukCuk.Infrastructure\\MISA.CukCuk.Infrastructure.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Admin\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\documentformat.openxml\\2.12.3\\documentformat.openxml.2.12.3.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\mysqlconnector\\1.3.4\\mysqlconnector.1.3.4.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512"
+    "C:\\Users\\nabang\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
+    "C:\\Users\\nabang\\.nuget\\packages\\documentformat.openxml\\2.12.3\\documentformat.openxml.2.12.3.nupkg.sha512",
+    "C:\\Users\\nabang\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\nabang\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\nabang\\.nuget\\packages\\mysqlconnector\\1.3.4\\mysqlconnector.1.3.4.nupkg.sha512",
+    "C:\\Users\\nabang\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512",
+    "C:\\Users\\nabang\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -82,19 +82,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\nabang\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Đại học\\Học kì 2 2020-2021\\Web - MISA\\(tháng 4) 27-04\\base class\\MISA.CukCuk.Core\\MISA.CukCuk.Core.csproj",
+      "projectUniqueName": "C:\\Users\\nabang\\Downloads\\base class\\MISA.CukCuk.Core\\MISA.CukCuk.Core.csproj",
       "projectName": "MISA.CukCuk.Core",
-      "projectPath": "D:\\Đại học\\Học kì 2 2020-2021\\Web - MISA\\(tháng 4) 27-04\\base class\\MISA.CukCuk.Core\\MISA.CukCuk.Core.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Đại học\\Học kì 2 2020-2021\\Web - MISA\\(tháng 4) 27-04\\base class\\MISA.CukCuk.Core\\obj\\",
+      "projectPath": "C:\\Users\\nabang\\Downloads\\base class\\MISA.CukCuk.Core\\MISA.CukCuk.Core.csproj",
+      "packagesPath": "C:\\Users\\nabang\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nabang\\Downloads\\base class\\MISA.CukCuk.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nabang\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -140,7 +140,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

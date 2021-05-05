@@ -18,8 +18,10 @@ using MISA.CukCuk.Infrastructure.Repositories;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace MISA.CukCuk.Api
@@ -41,6 +43,10 @@ namespace MISA.CukCuk.Api
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MISA.CukCuk.Api", Version = "v1" });
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
 
             //Tiêm vào start-up để xác định xem cái nào làm việc với cái nào
@@ -106,7 +112,11 @@ namespace MISA.CukCuk.Api
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseCors(c =>
+            {
+                c.AllowAnyOrigin();
+                c.AllowAnyMethod();
+            });
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

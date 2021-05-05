@@ -56,8 +56,19 @@ namespace MISA.CukCuk.Core.Services
         /// <returns></returns>
         public IEnumerable<MISAEntity> GetPaging(int pageIndex, int pageSize)
         {
-            var response = _dataAccessBaseRepository.GetPaging(pageIndex, pageSize);
-            return response;
+            if (pageIndex < 0 || pageSize < 0)
+            {
+                var response = new
+                {
+                    devMsg = Properties.Resources.Invalid_Paging_number,
+                    MISACode = Properties.Resources.MISACode
+                };
+                throw new CustomerException(response.devMsg);
+            }
+
+
+            var result  = _dataAccessBaseRepository.GetPaging(pageIndex, pageSize);
+            return result;
         }
         /// <summary>
         /// Insert 1 bản ghi vào database, nhận dữ liệu từ dataAccessBaseRepository, validate dữ liệu, rồi đẩy dữ liệu về controller
@@ -82,7 +93,11 @@ namespace MISA.CukCuk.Core.Services
             var rowsAffect = _dataAccessBaseRepository.Put(entity);
             return rowsAffect;
         }
-
+        /// <summary>
+        /// Kiểm tra dữ liệu, trả về exception nếu gặp lỗi
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="http"></param>
         private void Validate(MISAEntity entity, HttpType http) 
         {
             //Viết những đoạn mã validate chung giữa customer và customerGroup
@@ -99,7 +114,12 @@ namespace MISA.CukCuk.Core.Services
                 
                 if (requiredProperties.Length > 0)
                 {
-                    //Kiểm tra giá trị 
+                    //Kiểm tra nếu giá trị là null
+                    if(propertyValue == null)
+                    {
+                        propertyValue = "";
+                    }
+                    //Kiểm tra nếu giá trị bị bỏ trống
                     if (string.IsNullOrEmpty(propertyValue.ToString()))
                     {
                         var msgError = (requiredProperties[0] as RequiredField).MsgError;
@@ -118,7 +138,7 @@ namespace MISA.CukCuk.Core.Services
                 if(emailProperties.Length > 0)
                 {
                     //Kiểm tra giá trị
-                    if (!Regex.IsMatch(propertyValue.ToString(), @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"))
+                    if (!Regex.IsMatch(propertyValue.ToString(), @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" /*Properties.Resources.Regex_email*/))
                     {
                         var response = new
                         {
@@ -134,7 +154,7 @@ namespace MISA.CukCuk.Core.Services
                 if(phoneNumberProperties.Length > 0)
                 {
                     //Kiểm tra giá trị
-                    if (!Regex.IsMatch(propertyValue.ToString(), @"^((\+0?1\s)?)\(?\d{3}\)?[\s.\s]\d{3}[\s.-]\d{4}$"))
+                    if (!Regex.IsMatch(propertyValue.ToString(), @"^((\+0?1\s)?)\(?\d{3}\)?[\s.\s]\d{3}[\s.-]\d{4}$" /*Properties.Resources.Regex_phoneNumber*/))
                     {
                         var response = new
                         {

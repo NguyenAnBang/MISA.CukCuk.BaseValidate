@@ -27,7 +27,7 @@ namespace MISA.CukCuk.Infrastructure.Repositories
         /// <summary>
         /// Lấy tất cả dữ liệu từ database
         /// </summary>
-        /// <returns></returns>
+        /// <returns>tất cả bản ghi trong database</returns>
         public IEnumerable<MISAEntity> GetAll()
         {
 
@@ -37,7 +37,11 @@ namespace MISA.CukCuk.Infrastructure.Repositories
                 return response;
             }
         }
-
+        /// <summary>
+        /// Lẩy dữ liệu từ database dựa theo id truyền vào
+        /// </summary>
+        /// <param name="entityId"></param>
+        /// <returns>dữ liệu bản ghi được lấy về</returns>
         public MISAEntity GetCustomerById(Guid entityId)
         {
             using (dbConnection = new MySqlConnection(connectionString))
@@ -49,7 +53,11 @@ namespace MISA.CukCuk.Infrastructure.Repositories
                 return response;
             }
         }
-
+        /// <summary>
+        /// Thêm mới dữ liệu vào database
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns>Số bản ghi bị ảnh hưởng</returns>
         public int Post(MISAEntity entity)
         {
             using (dbConnection = new MySqlConnection(connectionString))
@@ -58,7 +66,11 @@ namespace MISA.CukCuk.Infrastructure.Repositories
                 return rowsAffect;
             }
         }
-
+        /// <summary>
+        /// Chỉnh sửa dữ liệu trong database
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns>Số bản ghi bị ảnh hưởng</returns>
         public int Put(MISAEntity entity)
         {
             using (dbConnection = new MySqlConnection(connectionString))
@@ -69,7 +81,11 @@ namespace MISA.CukCuk.Infrastructure.Repositories
                 return rowsAffect;
             }
         }
-
+        /// <summary>
+        /// Xóa dữ liệu trong database
+        /// </summary>
+        /// <param name="entityId"></param>
+        /// <returns>Số bản ghi bị ảnh hưởng</returns>
         public int Delete(Guid entityId)
         {
             using (dbConnection = new MySqlConnection(connectionString))
@@ -81,7 +97,12 @@ namespace MISA.CukCuk.Infrastructure.Repositories
                 return rowsAffect;
             }              
         }
-
+        /// <summary>
+        /// Phân trang
+        /// </summary>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize"></param>
+        /// <returns>Số lượng bản ghi mỗi trang</returns>
         public IEnumerable<MISAEntity> GetPaging(int pageIndex, int pageSize)
         {
             using (dbConnection = new MySqlConnection(connectionString))

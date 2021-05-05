@@ -541,19 +541,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\nabang\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Đại học\\Học kì 2 2020-2021\\Web - MISA\\(tháng 4) 27-04\\base class\\MISA.CukCuk.Api\\MISA.CukCuk.Api.csproj",
+      "projectUniqueName": "C:\\Users\\nabang\\Downloads\\base class\\MISA.CukCuk.Api\\MISA.CukCuk.Api.csproj",
       "projectName": "MISA.CukCuk.Api",
-      "projectPath": "D:\\Đại học\\Học kì 2 2020-2021\\Web - MISA\\(tháng 4) 27-04\\base class\\MISA.CukCuk.Api\\MISA.CukCuk.Api.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Đại học\\Học kì 2 2020-2021\\Web - MISA\\(tháng 4) 27-04\\base class\\MISA.CukCuk.Api\\obj\\",
+      "projectPath": "C:\\Users\\nabang\\Downloads\\base class\\MISA.CukCuk.Api\\MISA.CukCuk.Api.csproj",
+      "packagesPath": "C:\\Users\\nabang\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nabang\\Downloads\\base class\\MISA.CukCuk.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nabang\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -567,11 +567,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Đại học\\Học kì 2 2020-2021\\Web - MISA\\(tháng 4) 27-04\\base class\\MISA.CukCuk.Core\\MISA.CukCuk.Core.csproj": {
-              "projectPath": "D:\\Đại học\\Học kì 2 2020-2021\\Web - MISA\\(tháng 4) 27-04\\base class\\MISA.CukCuk.Core\\MISA.CukCuk.Core.csproj"
+            "C:\\Users\\nabang\\Downloads\\base class\\MISA.CukCuk.Core\\MISA.CukCuk.Core.csproj": {
+              "projectPath": "C:\\Users\\nabang\\Downloads\\base class\\MISA.CukCuk.Core\\MISA.CukCuk.Core.csproj"
             },
-            "D:\\Đại học\\Học kì 2 2020-2021\\Web - MISA\\(tháng 4) 27-04\\base class\\MISA.CukCuk.Infrastructure\\MISA.CukCuk.Infrastructure.csproj": {
-              "projectPath": "D:\\Đại học\\Học kì 2 2020-2021\\Web - MISA\\(tháng 4) 27-04\\base class\\MISA.CukCuk.Infrastructure\\MISA.CukCuk.Infrastructure.csproj"
+            "C:\\Users\\nabang\\Downloads\\base class\\MISA.CukCuk.Infrastructure\\MISA.CukCuk.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\nabang\\Downloads\\base class\\MISA.CukCuk.Infrastructure\\MISA.CukCuk.Infrastructure.csproj"
             }
           }
         }
@@ -617,7 +617,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
